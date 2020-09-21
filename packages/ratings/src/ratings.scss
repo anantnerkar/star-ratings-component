@@ -72,12 +72,13 @@ body {
 }
 
 .container {
-    width: 40%;
-    background-color: lightgrey;
+    width: var(--container-width);
+    background-color: var(--background-color);
 }
 
 .star-size {
-    font-size: var(--card-star-font-size);
+    font-size: var(--star-font-size);
+    padding-right: var(--star-paddings);
 }
 
 .star-color {
