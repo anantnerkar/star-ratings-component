@@ -74,13 +74,19 @@ body {
 .container {
     width: var(--container-width);
     background-color: var(--background-color);
+    height: var(--container-height);
+    
 }
 
 .star-size {
     font-size: var(--star-font-size);
-    padding-right: var(--star-paddings);
+    
 }
 
 .star-color {
     color: var(--star-rate);
+}
+
+.star-margin {
+    margin-left: var(--star-paddings);
 }

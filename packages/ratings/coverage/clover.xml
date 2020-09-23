@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600582414703" clover="3.2.0">
-  <project timestamp="1600582414703" name="All files">
-    <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4" elements="13" coveredelements="13" complexity="0" loc="7" ncloc="7" packages="1" files="2" classes="2"/>
+<coverage generated="1600884454018" clover="3.2.0">
+  <project timestamp="1600884454019" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3" elements="13" coveredelements="12" complexity="0" loc="8" ncloc="8" packages="1" files="2" classes="2"/>
     <file name="index.ts" path="D:\ORXE\my-first-project\packages\ratings\src\index.ts">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
     </file>
     <file name="orxe-ratings.ts" path="D:\ORXE\my-first-project\packages\ratings\src\orxe-ratings.ts">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-      <line num="10" count="2" type="stmt"/>
-      <line num="12" count="2" type="stmt"/>
-      <line num="13" count="2" type="stmt"/>
-      <line num="49" count="3" type="stmt"/>
-      <line num="52" count="15" type="stmt"/>
-      <line num="65" count="2" type="stmt"/>
-      <line num="70" count="2" type="stmt"/>
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <line num="15" count="2" type="stmt"/>
+      <line num="29" count="3" type="stmt"/>
+      <line num="43" count="3" type="stmt"/>
+      <line num="44" count="3" type="stmt"/>
+      <line num="45" count="15" type="stmt"/>
+      <line num="47" count="3" type="stmt"/>
+      <line num="51" count="15" type="stmt"/>
+      <line num="62" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -1,7 +1,6 @@
 :host{
-    --star-font-size: 16px;
-    --star-paddings: 2px;
-    --container-width: 13%;
+    --star-paddings: var(--spacing-01);
+    --container-width: 92px;
     --background-color: lightgrey;
+    --container-height: var(--spacing-05);
 }
-$card-font-size: 1.2rem;

@@ -7,56 +7,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { html, customElement, LitElement } from 'lit-element';
+import { html, customElement, LitElement, property } from 'lit-element';
 import styles from './ratings-css';
+import "@orxe-components/icons";
+import "@orxe-components/icon";
 let OrxeRatings = class OrxeRatings extends LitElement {
     constructor() {
-        super();
-        this.ratings = [];
-        this.onInitilize();
+        super(...arguments);
+        this.starRatings = 5;
     }
     render() {
         return html `
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <div class="container">
-  <div class="main" data-testid="ratings-main" >${this.ratings.map((currentelement) => html `
-      
-      <span class="fa fa-star star-size  ${currentelement.checked == true ? 'checked star-color' : ''}"></span>
-      
-      `)}
-  </div>
-  </div>
+    <div class="container">
+      <div class="main" data-testid="ratings-main" 
+      ratings=${this.starRatings} rating-value=${this.ratingValue}>  
+      ${this._renderStarIcon()}
+      </div>
+    </div>
   `;
     }
-    onInitilize() {
-        this.ratings = [
-            {
-                id: 1,
-                checked: true
-            },
-            {
-                id: 2,
-                checked: true
-            },
-            {
-                id: 3,
-                checked: true
-            },
-            {
-                id: 4,
-                checked: false
-            },
-            {
-                id: 5,
-                checked: false
-            },
-        ];
+    _renderStarIcon() {
+        const starCountRendererList = [];
+        for (let i = 0; i < this.starRatings; i++) {
+            starCountRendererList[i] = this.starCountRenderer(i);
+        }
+        return starCountRendererList;
+    }
+    starCountRenderer(i) {
+        return html `
+    <orxe-icon 
+      icon="ic-star" 
+      class="${i < this.ratingValue ? 'star-color' : ''} ${i > 0 ? 'star-margin' : ''}"
+      size="small">
+    </orxe-icon>`;
     }
 };
 OrxeRatings.styles = styles;
+__decorate([
+    property({ type: Number, reflect: true, attribute: 'ratings' }),
+    __metadata("design:type", Object)
+], OrxeRatings.prototype, "starRatings", void 0);
+__decorate([
+    property({ type: Number, reflect: true, attribute: 'rating-value' }),
+    __metadata("design:type", Object)
+], OrxeRatings.prototype, "ratingValue", void 0);
 OrxeRatings = __decorate([
-    customElement('orxe-ratings'),
-    __metadata("design:paramtypes", [])
+    customElement('orxe-ratings')
 ], OrxeRatings);
 export default OrxeRatings;

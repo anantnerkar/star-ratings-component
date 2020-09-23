@@ -48,6 +48,7 @@
     "packageManager": "npm"
   },
   "dependencies": {
+    "@my-first-project/ratings": "0.0.2",
     "@orxe-components/icon": "^1.0.14",
     "@orxe-components/icons": "^1.0.9"
   }

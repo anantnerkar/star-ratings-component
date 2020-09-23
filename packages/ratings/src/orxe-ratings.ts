@@ -1,63 +1,63 @@
-import { html, customElement, LitElement } from 'lit-element';
+import { html, customElement, LitElement, property } from 'lit-element';
 import styles from './ratings-css';
+import "@orxe-components/icons";
+import "@orxe-components/icon";
 
 @customElement('orxe-ratings')
 export default class OrxeRatings extends LitElement {
+
   /**
-   * Implement `render` to define a template for button element.
+   *
+   * @memberof Ratings
+   * This is used to give the value for star ratings
    */
+  @property({ type: Number, reflect: true, attribute: 'ratings' })
+  starRatings = 5;
 
-  public ratings: any = [];
-  constructor() {
-    super();
-    this.onInitilize();
-  }
+  /**
+   *
+   * @memberof Ratings
+   * This is used to give the value for star ratings
+   */
+  @property({ type: Number, reflect: true, attribute: 'rating-value' })
+  ratingValue;
 
-render() {
-  
-  return html`
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <div class="container">
-  <div class="main" data-testid="ratings-main" >${this.ratings.map((currentelement) => html`
-      
-      <span class="fa fa-star star-size  ${currentelement.checked == true ? 'checked star-color' : ''}"></span>
-      
-      `)}
-  </div>
-  </div>
+  /**
+  * Implement `render` to define a template for button element.
+  */
+  render() {
+    return html`
+    <div class="container">
+      <div class="main" data-testid="ratings-main" 
+      ratings=${this.starRatings} rating-value=${this.ratingValue}>  
+      ${this._renderStarIcon()}
+      </div>
+    </div>
   `;
 }
 
+  /**
+   * This method render the star icon
+   */
+  private _renderStarIcon() {
+    const starCountRendererList : any =[];
+    for(let i=0; i < this.starRatings; i++) {
+      starCountRendererList[i] = this.starCountRenderer(i);
+    }
+    return starCountRendererList;
+  }
+
+  starCountRenderer(i: Number): any {
+    return html`
+    <orxe-icon 
+      icon="ic-star" 
+      class="${i < this.ratingValue ? 'star-color' : ''} ${i > 0 ? 'star-margin' : ''}"
+      size="small">
+    </orxe-icon>`;
+  }
 
   /**
    *  Getting styles from components custom scss file
    */
   static styles = styles;
-
-  onInitilize() {
-      this.ratings = [
-        {
-          id: 1,
-          checked: true
-        },
-        {
-          id: 2,
-          checked: true
-        },
-        {
-          id: 3,
-          checked: true
-        },
-        {
-          id: 4,
-          checked: false
-        },
-        {
-          id: 5,
-          checked: false
-        },
-      ]
-  }
-  
 }
