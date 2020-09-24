@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600884454018" clover="3.2.0">
-  <project timestamp="1600884454019" name="All files">
-    <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3" elements="13" coveredelements="12" complexity="0" loc="8" ncloc="8" packages="1" files="2" classes="2"/>
+<coverage generated="1600940796843" clover="3.2.0">
+  <project timestamp="1600940796844" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3" elements="15" coveredelements="14" complexity="0" loc="8" ncloc="8" packages="1" files="2" classes="2"/>
     <file name="index.ts" path="D:\ORXE\my-first-project\packages\ratings\src\index.ts">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
     </file>
     <file name="orxe-ratings.ts" path="D:\ORXE\my-first-project\packages\ratings\src\orxe-ratings.ts">
-      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
       <line num="15" count="2" type="stmt"/>
       <line num="29" count="3" type="stmt"/>
       <line num="43" count="3" type="stmt"/>
